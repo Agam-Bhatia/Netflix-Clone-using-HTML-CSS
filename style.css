@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+body{
+    background-color: black;
+}
+.main{
+    background-image: url("assets/images/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 96vh;
+    position: relative;
+}
+.main .box{
+    height: 96vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.69;
+    position: absolute;
+    top: 0px;
+}
+nav{
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 62px;
+}
+nav span img{
+    color: red;
+    width: 114px;
+    position: relative;
+    z-index: 10;
+}
+nav button{
+    position: relative;
+    z-index: 10;
+}
+nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.btn{
+    padding: 6px 12px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI Semibold';
+}
+.btn-transparent{
+    background-color: rgba(23, 23, 23, 0.2);
+    border: 2px solid #463a41;
+    border-radius: 4px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+.btn-red-sm{
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+    
+}
+.hero{
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    /* height is reduced by 62px because nav bar height is 62px. Both hero class and nav element are child of main class but since hero height is 100%(of its parent) so we used calc() function to reduce the nav height.*/
+    height: calc(100% - 62px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    /* setting position to relative will set this element above the .box(sibling) element such that the opacitiy effect cannot be seen on the text */
+    position: relative;
+    gap: 20px;
+    /* padding from top & bottom was removed to align the separation line just after the hero box */
+    padding: 0 25px; 
+}
+/* IMPORTANT NOTE: in hero class we used '>' to assign the styling to its direct child only. Otherwise, if we dont use the > then it will also target the styling of '.user-input input' as the first-child. */
+.hero > :nth-child(1){
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+}
+.hero > :nth-child(2){
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+}
+.hero > :nth-child(3){
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+.user-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 40vw;
+}
+.user-input input{
+    background-color: rgba(23, 23, 23, 0.2);
+    border: 2px solid #463a41;
+    border-radius: 4px;
+    padding: 16px 15px;
+    width: 60%;
+    color: white;
+}
+.btn-red{
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 22px;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separation{
+    height: 8px;
+    background-color: #232323;
+}
+
+
+.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: 40px 12vw; 
+    color: white;
+}
+.second .left h2{
+    font-size: 45px;
+    font-weight: 900;
+}
+.second .left p{
+    font-size: 22px;
+}
+.second .right{
+    position: relative;
+}
+.second .right img{
+    width: 40vw;
+    position: relative;
+    z-index: 10;
+}
+.second .right video{
+    width: 32vw;
+    position: absolute;
+    top: 70px;
+    right: 42px;
+}
+
+
+.third{
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 12vw;
+}
+.third .left{
+    position: relative;
+}
+.third .flex-image{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    height: 13vh;
+    width: 22vw;
+    background-color: black;
+    border: 2px solid grey;
+    border-radius: 10px;
+    bottom: 36px;
+    left: 145px;
+    padding: 10px;
+    gap: 15px;
+}
+.flex-image > :first-child{
+    height: 99px;
+}
+.flex-image > :nth-child(3){
+    height: 60px;
+}
+.third .right{
+    text-align: left;
+}
+.third .right h2{
+    font-size: 45px;
+    font-weight: 900;
+}
+.third .right p{
+    font-size: 22px;
+}
+
+.fourth{
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 12vw;
+}
+.fourth .left{
+    text-align: left;
+}
+.fourth .left h2{
+    font-size: 45px;
+    font-weight: 900;
+}
+.fourth .left p{
+    font-size: 22px;
+}
+.fourth .right{
+    position: relative;
+}
+.fourth .right img{
+    position: relative;
+    z-index: 10;
+}
+.fourth .right video{
+    position: absolute;
+    top: 45px;
+    right: 120px;
+    height: 31vh;
+}
+
+.fifth{
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 12vw;
+    /* gap: 10px; */
+}
+.fifth .right{
+    text-align: left;
+}
+.fifth .right h2{
+    font-size: 45px;
+    font-weight: 900;
+}
+.fifth .right p{
+    font-size: 22px;
+}
+
+.sixth{
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px 12vw;
+    gap: 10px;
+}
+
+.sixth h2{
+    font-size: 45px;
+    font-weight: 900;
+}
+.sixth > :nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80vw;
+}
+.sixth .qtn{
+    background-color: #2c2c2d;
+    height: 60px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 22px;
+}
+.sixth > :nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 80vw;
+}
+.sixth span{
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
